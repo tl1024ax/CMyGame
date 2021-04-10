@@ -7,7 +7,7 @@
 #include "MyObject.generated.h"
 
 /**
- *
+ * siki ѧԺ
  */
 UCLASS(Blueprintable)
 class CMYGAME_API UMyObject : public UObject

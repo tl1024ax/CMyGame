@@ -10,6 +10,7 @@ UMyObject::UMyObject()
 }
 
 void UMyObject::MyFunction() {
+	UE_LOG(LogTemp, Error,TEXT("Hello World!,这个函数在 蓝图关卡场景 Event Graph 中调用，Blueprints -> Open Level Blueprint") );
 	UE_LOG(LogTemp, Log,TEXT("Hello World!") );
 	UE_LOG(LogTemp, Warning, TEXT("Hello World!"));
 	UE_LOG(LogTemp, Error, TEXT("Hello World!"));

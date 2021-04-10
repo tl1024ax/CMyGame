@@ -27,14 +27,17 @@ void ACameraDirector::Tick(float DeltaTime)
 	const float TimeBetweenCameraChange = 2.0f;
 	const float SmoothBlendTime = 0.75f;
 	TimeToNextCameraChange -= DeltaTime;
-	if (TimeToNextCameraChange <= 0.0f) {
+	if (TimeToNextCameraChange <= 0.0f)
+	{
 		TimeToNextCameraChange += TimeBetweenCameraChange;
 
 		// 查找处理本地玩家控制的Actor
 		APlayerController* OurPlayerController = UGameplayStatics::GetPlayerController(this, 0);
 
-		if (OurPlayerController) {
-			if (OurPlayerController->GetViewTarget() != CameraOne && CameraOne != nullptr) {
+		if (OurPlayerController)
+		{
+			if (OurPlayerController->GetViewTarget() != CameraOne && CameraOne != nullptr)
+			{
 				OurPlayerController->SetViewTarget(CameraOne);
 			}
 			else if (OurPlayerController->GetViewTarget() != CameraTwo && CameraTwo != nullptr)
